@@ -4,7 +4,7 @@
   "description": "backend for phone application: wiio",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.mjs"
+    "start": "nodemon index.ts"
   },
   "author": "Hallur Vid Neyst",
   "license": "ISC",

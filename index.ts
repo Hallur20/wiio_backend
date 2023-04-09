@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from 'dotenv'
-import moviesController from  './Controllers/MoviesController.mjs'
-import SeriesController from  './Controllers/SeriesController.mjs'
+import moviesController from  './Controllers/MoviesController'
+import SeriesController from  './Controllers/SeriesController'
 
 dotenv.config();
 
