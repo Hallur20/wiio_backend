@@ -4,7 +4,6 @@ import variables from "../variables";
 import {ToModel} from "../Models/MediaResults"
 
 const moviedb = new MovieDb(variables.apiKey);
-
 const router = express.Router();
 
 router.get("/search/:query", async (req, res) => {

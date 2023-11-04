@@ -18,16 +18,24 @@ class MediaResult {
   rating?: number;
 }
 
-export const ToModel = (
-  response: MovieResultsResponse | TvResultsResponse
-) => {
+export const ToModel = (response: MovieResultsResponse | TvResultsResponse) => {
   var model = new MediaResultsModel();
   model.page = response.page;
   model.resultsCount = response.total_results;
   model.pagesCount = response.total_pages;
 
   model.results = response.results.map(
-    (r: { id: any; release_date: any; media_type: any; title: any; popularity: any; overview: any; genre_ids: any; vote_average: any; first_air_date: any; }) =>
+    (r: {
+      id: any;
+      release_date: any;
+      media_type: any;
+      title: any;
+      popularity: any;
+      overview: any;
+      genre_ids: any;
+      vote_average: any;
+      first_air_date: any;
+    }) =>
       ({
         id: r.id,
         releaseAt: r.release_date ?? r.first_air_date,
